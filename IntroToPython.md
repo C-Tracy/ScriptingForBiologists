@@ -1,4 +1,4 @@
-# Tutorial Walk Through of Python Variable Types and Methods
+# Python Variable Types and Methods
 
 ## Variable Types
 There are a wide array of variable types, many of which we will not need for this course. 
