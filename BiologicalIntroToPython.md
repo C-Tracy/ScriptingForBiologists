@@ -70,7 +70,7 @@ Not bad! That was a pretty easy way to replace one variable with another. You co
 
 Let's move onto methods manipulating lists for now...
 
-## List Methods
+### List Methods
 Now lets look at some methods available for strings that are related to our DNA sequences
 ```
 DNA_list = ['ATCGCTAAATGTA', 'ATCGAATGTAAA']
@@ -85,7 +85,7 @@ DNA_list #when we are in an interactive shell we can just call the variable name
 print(DNA_list) #lets go over using print statements though, that will print when running it as a script. 
 ```
 
-## Print Statements
+### Print Statements
 Print statements are used to print output for human's to read. Use these often as you are developing a script to make sure your script is doing what you think it is doing. 
 
 ```
@@ -112,7 +112,7 @@ As we saw above print will display the output in our terminal. It doesn't, howev
 To provide the variable to your program you want to use the command 'return'.
 This is necessary as we start working within functions in python. 
 
-## Concatenation
+### Concatenation
 Python makes is very easy to concatenate multiple strings together or strings along with variables.
 Let's first try with undefined strings:
 ```
@@ -126,7 +126,7 @@ sequence_ab = sequence_a + sequence_b
 sequence_ab #here we were able to concatenate the two sequences into a single sequence
 ```
 
-## Dictionary
+### Dictionary
 Instead setting up a code to replace sequences manually, we can create a dictionary to do the replacement
 This may be useful if it is on a larger scale, and if it is a replacement you use often (such as the universal genetic code).
 
@@ -143,19 +143,22 @@ dict1['frog']
 ```
 Remember that dictionaries are unidirectional and you cannot call the 'value' and get the matching 'key'
 
-## For Loops in Python
+### For Loops in Python
 Let's now briefly review syntax of for loops in python.
 ```
-for i in something:
+for i in list:
     do something
 ```
 Note that the for line always ends with : 
+
 In python, for a command to be included within your for-loop it needs to be indented with four spaces. 
 
 Now lets try to make a more biologically relevant for loop that may help in looping through DNA.
+Additionally, note that if you are working in python interactvie and running each line of code individually, you can use \ at the end of your line to let you continue a statement onto the next line
 ```
+python3
 DNA_list = ['GGGG', 'ATCG']
-for i in DNA_list:
+for i in DNA_list: \
     print(i)
 ```
 Play around with the above for loop and see what would happen if you didn't indent your print statement. 
