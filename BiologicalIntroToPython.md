@@ -142,3 +142,20 @@ dict1['frog']
 #KeyError:'frog'
 ```
 Remember that dictionaries are unidirectional and you cannot call the 'value' and get the matching 'key'
+
+## For Loops in Python
+Let's now briefly review syntax of for loops in python.
+```
+for i in something:
+    do something
+```
+Note that the for line always ends with : 
+In python, for a command to be included within your for-loop it needs to be indented with four spaces. 
+
+Now lets try to make a more biologically relevant for loop that may help in looping through DNA.
+```
+DNA_list = ['GGGG', 'ATCG']
+for i in DNA_list:
+    print(i)
+```
+Play around with the above for loop and see what would happen if you didn't indent your print statement. 
