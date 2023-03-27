@@ -12,7 +12,7 @@ The overview of steps to use a virtual environment, whether on your own machine 
 
 Once you have created a virtual environment and are coming back to an existing virtual environment, you will skip steps 1-3 above, and just activate your virtual environment to run programs or install additional packages, and then deactivate your virtual environment.  
 
-Here I am going to introduce you to the different methods of creating virtual environments on the Easley supercomputer. 
+Below I am going to introduce you to the different methods of creating virtual environments on the Easley supercomputer. 
 These will be largely the same as what you will do on your local computer if you are using virtual environments to have mutiple versions of a package, or if you are using a **different** supercomputer. 
 If you are using a different supercomputing cluster (such as the ASC), I would recommend you examine their user guide for different applications of these. 
 
@@ -43,15 +43,15 @@ module list
 Okay if you are new to supercomputers, you will want to go through documentation provided, however this should be sufficient to explain the differences between virtual environment options provided below. 
 
 
-#### Anaconda Virtual Environments
+### Anaconda Virtual Environments
 First, we will create a python virtual environment using **anaconda**. In this example I create a virtual environment called genome_env2, in which I install useful genomics packages using bioconda. 
 
-First load a version of python installed with anaconda: 
+First load a version of python installed with anaconda, this will be specific to your machine: 
 ```
 module load python/anaconda 
 ```
 
-This next step will tell the program to create a local package directory rather than the default global setting (which you do not have permissions for)
+This next step will tell the program to create a local package directory rather than the default global setting (which you do not have permissions for in a supercomputer):
 ```
 export CONDA_PKGS_DIRS=~/.conda/pkgs 
 ```
@@ -64,7 +64,7 @@ conda install -c bioconda bam2fastx #install the desired package using conda
 conda deactivate #this closes the virtual environment
 ```
 
-#### python3 venv
+### Python3 venv
 venv is a module that already exists within python to create virtual environments, and as such we do not need to install anything to create a virtual environment.
 In the script below we will simply create a folder for our virtual environment, move into that folder, and then create our virtual environment for out project. 
 
