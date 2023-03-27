@@ -12,6 +12,8 @@ Using Python on Easley: https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easle
 
 ### Python Virtual Environments in Easley
 
+#### Anaconda
+
 First, create a python virtual environment using **anaconda**. In this example I create a virtual environment called genome_env2, in which I install useful genomics packages using bioconda. 
 ```
 module load python/anaconda 
@@ -22,11 +24,13 @@ conda install -c bioconda bam2fastx #install the desired package using conda
 conda deactivate #this closes the virtual environment
 ```
 
+#### python3 venv
 Create a virtual environment using python3 venv:
 ```
 module load python3
 python3 -m venv NAME
 ```
+
 ## Alabama Supercomputer
 Every graduate student at Auburn should have access to the Alabama Supercomputer (ASC). Here are a few helpful resources for ASC users. 
 
