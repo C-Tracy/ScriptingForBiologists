@@ -95,8 +95,12 @@ mkdir test_ve
 cd test_ve
 python -m venv test_venv
 ls 
-#you should now see a folder with your virtual environment name (here test_venv)
+```
+
+You should now see a folder with your virtual environment name (here test_venv), now lets activate that virtual environment, install our packages, and then deactivate it. 
+```
 source test_venv/bin/activate
+#line to install
 #you should now see that you have entered your virtual environment
 deactivate
 ```
