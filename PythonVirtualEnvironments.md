@@ -63,6 +63,25 @@ source activate genome_env2 #next we have to actually load that virtual environm
 conda install -c bioconda bam2fastx #install the desired package using conda
 conda deactivate #this closes the virtual environment
 ```
+You should notice that when you activate the environment, your environment name appears in parenthese or brackets before your command prompt. 
+Once you deactivate the environment you should no longer see this. 
+
+#### Managing conda environments
+
+See what environments are available:
+```
+conda env list
+```
+
+See what packages are installed in a specific environment:
+```
+conda list -n conda_testenv
+```
+
+Removing an environment:
+```
+conda env remove --name conda_testenv
+```
 
 ### Python3 venv
 venv is a module that already exists within python to create virtual environments, and as such we do not need to install anything to create a virtual environment.
