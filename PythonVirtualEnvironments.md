@@ -12,6 +12,7 @@ Some of you may have access the the Easley computing cluster at Auburn Universit
 Easley's User Guide: https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/easley.html  
 Using Python on Easley: https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/python.html
 
+In general, the process of creating virtual environments will be similar across different computing clusters. Much of the information for the following outline for Easley is pulled from their User Guide provided above. 
 
 ### Python Virtual Environments in Easley
 
@@ -58,10 +59,5 @@ And don't forget to exit the virtual env:
 ```
 source deactivate
 ```
-
-## Alabama Supercomputer
-Every graduate student at Auburn should have access to the Alabama Supercomputer (ASC). Here are a few helpful resources for ASC users. 
-
-### 
 
 
