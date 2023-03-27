@@ -44,7 +44,9 @@ Okay if you are new to supercomputers, you will want to go through documentation
 
 
 ## Anaconda Virtual Environments
-First, we will create a python virtual environment using **anaconda**. In this example I create a virtual environment called genome_env2, in which I install useful genomics packages using bioconda. 
+First, we will create a python virtual environment using **anaconda**. 
+In this example I create a virtual environment called genome_env2, in which I install useful genomics packages using bioconda. 
+Here is a helpful guide to managing environments with conda: https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 
 First load a version of python installed with anaconda, this will be specific to your machine: 
 ```
