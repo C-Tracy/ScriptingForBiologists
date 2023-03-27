@@ -105,7 +105,7 @@ source test_venv/bin/activate
 deactivate
 ```
 ## python3 virtualenv with pip
-This method uses pip (python package manager) to install virtualenv to a local directory. 
+This method uses pip (python package manager) to install virtualenv to a local directory. See this helpful guide for more in depth details, and to see different syntax between Unix/macOS and Windows: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
 
 First we will need to use pip to install virtualenv. You will only need to run these commands once to install virtualenv:
 ```
