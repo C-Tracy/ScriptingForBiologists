@@ -53,7 +53,6 @@ pip3 install <package_name>
 And don't forget to exit the virtual env: 
 '''
 source deactivate
-
 '''
 
 ## Alabama Supercomputer
