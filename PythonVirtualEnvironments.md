@@ -30,6 +30,31 @@ Create a virtual environment using python3 venv:
 module load python3
 python3 -m venv NAME
 ```
+#### python3 virtualenv with pip
+This method uses pip (python package manager) to install virtualenv to a local directory. 
+
+
+First we will need to use pip to install virtualenv. You will only need to run these commands once to install virtualenv:
+```
+module load python3
+pip3 install --user virtualenv
+```
+
+Now we can create the virtual environment:
+```
+python3 -m virtualenv env1_python
+source env1_python/bin/activate
+```
+Once within the virtual environment you can install all packages desired:
+'''
+pip3 install <package_name>
+'''
+
+And don't forget to exit the virtual env: 
+'''
+source deactivate
+
+'''
 
 ## Alabama Supercomputer
 Every graduate student at Auburn should have access to the Alabama Supercomputer (ASC). Here are a few helpful resources for ASC users. 
