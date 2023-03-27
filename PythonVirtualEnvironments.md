@@ -6,6 +6,7 @@ The goal of this tutorial is to introduce you to creating virtual environments i
 Some of you may have access the the Easley computing cluster at Auburn University. If you do, here are a few helpful resources for Easley users. 
 
 Easley's User Guide: https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/easley.html
+
 Using Python on Easley: https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/python.html
 
 
