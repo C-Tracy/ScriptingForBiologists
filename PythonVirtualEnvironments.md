@@ -1,12 +1,15 @@
 # Python Virtual Environments and Supercomputers
 
-The goal of this tutorial is to introduce you to creating virtual environments in python. This becomes very useful when working on a supercomputer, as it allows you to create your own environment and install packages there, rather than needing supercomputer admin to install packages. 
+The goal of this tutorial is to introduce you to creating virtual environments in python. This becomes very useful in a number of scenarios. First, when working on a supercomputer, it allows you to create your own environment and install packages locally, rather than needing supercomputer admin to install packages. Second, when doing different projects you may need different versions of a package. This will allow you to install multiple versions of a package without having to uninstall and reinstall different versions each time. 
+
+Here I am going to introduce you to the different methods of creating virtual environments on the Easley supercomputer. 
+These will be largely the same as what you will do on your local computer if you are using virtual environments to have mutiple versions of a package, or if you are using a **different** supercomputer. 
+If you are using a different supercomputing cluster (such as the ASC), I would recommend you examine their user guide for different applications of these. 
 
 ## Auburn University Easley Supercomputer
 Some of you may have access the the Easley computing cluster at Auburn University. If you do, here are a few helpful resources for Easley users. 
 
-Easley's User Guide: https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/easley.html
-
+Easley's User Guide: https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/easley.html \\
 Using Python on Easley: https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/python.html
 
 
