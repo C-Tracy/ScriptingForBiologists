@@ -24,7 +24,7 @@ Using Python on Easley: https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easle
 
 In general, the process of creating virtual environments will be similar across different computing clusters. Much of the information for the following outline for Easley is pulled from their User Guide provided above. 
 
-### Python Virtual Environments in Easley
+### A few helpful commands for Easley
 
 Before we get started creating python virtual environments, I'm going to provide a quick outline of commands that are helpful in Easley if you are just getting started. These will differ slightly between supercomputers, so see the user guide if you are using the ASC.
 
@@ -43,7 +43,7 @@ module list
 Okay if you are new to supercomputers, you will want to go through documentation provided, however this should be sufficient to explain the differences between virtual environment options provided below. 
 
 
-### Anaconda Virtual Environments
+## Anaconda Virtual Environments
 First, we will create a python virtual environment using **anaconda**. In this example I create a virtual environment called genome_env2, in which I install useful genomics packages using bioconda. 
 
 First load a version of python installed with anaconda, this will be specific to your machine: 
@@ -66,7 +66,7 @@ conda deactivate #this closes the virtual environment
 You should notice that when you activate the environment, your environment name appears in parenthese or brackets before your command prompt. 
 Once you deactivate the environment you should no longer see this. 
 
-#### Managing conda environments
+### Managing conda environments
 
 See what environments are available:
 ```
@@ -83,7 +83,7 @@ Removing an environment:
 conda env remove --name conda_testenv
 ```
 
-### Python3 venv
+## Python3 venv
 venv is a module that already exists within python to create virtual environments, and as such we do not need to install anything to create a virtual environment.
 In the script below we will simply create a folder for our virtual environment, move into that folder, and then create our virtual environment for out project. 
 
@@ -100,7 +100,7 @@ source test_venv/bin/activate
 #you should now see that you have entered your virtual environment
 deactivate
 ```
-#### python3 virtualenv with pip
+## python3 virtualenv with pip
 This method uses pip (python package manager) to install virtualenv to a local directory. 
 
 First we will need to use pip to install virtualenv. You will only need to run these commands once to install virtualenv:
