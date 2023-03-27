@@ -45,25 +45,20 @@ Now we can create the virtual environment:
 python3 -m virtualenv env1_python
 source env1_python/bin/activate
 ```
+
 Once within the virtual environment you can install all packages desired:
-'''
+```
 pip3 install <package_name>
-'''
+```
 
 And don't forget to exit the virtual env: 
-'''
+```
 source deactivate
-'''
+```
 
 ## Alabama Supercomputer
 Every graduate student at Auburn should have access to the Alabama Supercomputer (ASC). Here are a few helpful resources for ASC users. 
 
 ### 
 
-## Create a Python Virtual Environment in Easley
-module load python/anaconda
-export CONDA_PKGS_DIRS=~/.conda/pkgs
-conda create -n genome_env2
-source activate genome_env2
-conda install -c bioconda bam2fastx
-conda deactivate
+
