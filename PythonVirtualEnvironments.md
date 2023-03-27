@@ -5,9 +5,13 @@ The goal of this tutorial is to introduce you to creating virtual environments i
 ## Auburn University Easley Supercomputer
 Some of you may have access the the Easley computing cluster at Auburn University. If you do, here are a few helpful resources for Easley users. 
 
+Easley's User Guide: https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/easley.html
+Using Python on Easley: https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/python.html
+
+
 ### Python Virtual Environments in Easley
 
-First, create a python virtual environment using anaconda. In this example I create a virtual environment called genome_env2, in which I install useful genomics packages using bioconda. 
+First, create a python virtual environment using **anaconda**. In this example I create a virtual environment called genome_env2, in which I install useful genomics packages using bioconda. 
 ```
 module load python/anaconda 
 export CONDA_PKGS_DIRS=~/.conda/pkgs #this is particular to easley, and it tells it to create a local package directory
@@ -17,6 +21,11 @@ conda install -c bioconda bam2fastx #install the desired package using conda
 conda deactivate #this closes the virtual environment
 ```
 
+Create a virtual environment using python3 venv:
+```
+module load python3
+python3 -m venv NAME
+```
 ## Alabama Supercomputer
 Every graduate student at Auburn should have access to the Alabama Supercomputer (ASC). Here are a few helpful resources for ASC users. 
 
