@@ -88,8 +88,8 @@ See what packages are installed in a specific environment:
 ```
 conda list -n test_env1
 ```
-**Take a screenshot of your terminal including the command entered and the output that it printed to your screen.
-You will compile these screenshots throughout the tutorial for your weekly assignment.**  
+*Take a screenshot of your terminal including the command entered and the output that it printed to your screen.
+You will compile these screenshots throughout the tutorial for your weekly assignment.*
 
 Now lets remove our virtual environment that we don't need anymore:
 ```
@@ -116,7 +116,7 @@ pip install pandas
 python -m pip list #cofirm what packages were installed
 deactivate
 ```
-**Take a screenshot of your terminal from the python -m pip list command and the output that it printed to your screen.**
+*Take a screenshot of your terminal from the python -m pip list command and the output that it printed to your screen.*
 
 
 To delete a virtual environment created using venv we can run this code to simply removing the folder and all it's contents (-r flag) - **but be cautious about running rm -r and make sure you are removing the correct thing**:
@@ -144,7 +144,7 @@ Once within the virtual environment you can install all packages desired, and ag
 pip install scipy
 python -m pip list #see a list of packages installed 
 ```
-**Take a screenshot of your terminal from the python -m pip list command and the output that it printed to your screen.**
+*Take a screenshot of your terminal from the python -m pip list command and the output that it printed to your screen.*
 
 And don't forget to exit the virtual env: 
 ```
