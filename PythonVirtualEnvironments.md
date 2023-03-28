@@ -89,9 +89,9 @@ See what packages are installed in a specific environment:
 conda list -n test_env1
 ```
 **Take a screenshot of your terminal including the command entered and the output that it printed to your screen.
-You will compile these screenshots throughout the tutorial for your weekly assignment.
-**
-Removing an environment:
+You will compile these screenshots throughout the tutorial for your weekly assignment.**  
+
+Now lets remove our virtual environment that we don't need anymore:
 ```
 conda env remove --name test_env1
 ```
