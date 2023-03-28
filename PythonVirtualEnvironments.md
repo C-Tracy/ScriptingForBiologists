@@ -48,7 +48,13 @@ First, we will create a python virtual environment using **anaconda**.
 In this example I create a virtual environment called genome_env2, in which I install useful genomics packages using bioconda. 
 Here is a helpful guide to managing environments with conda: https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 
-First load a version of python installed with anaconda, this will be specific to your machine: 
+Before we create our virtual environment, lets first create a directory for our virtual environments, and move into that directory:
+```
+mkdir venvs
+cd venvs
+```
+
+Now, load a version of python installed with anaconda, this will be specific to your machine, and this is the path for Easley. On your machine you may be able to simply call anaconda: 
 ```
 module load python/anaconda 
 ```
@@ -58,54 +64,57 @@ This next step will tell the program to create a local package directory rather 
 export CONDA_PKGS_DIRS=~/.conda/pkgs 
 ```
 
-Now we will create our virtual environment, load it, install packages, and the deactivate:
+Now we will create our virtual environment, load it, install packages, and then deactivate our environment:
 ```
-conda create -n genome_env2 #first we have to create the virtual environment, giving it whatever name you like
-source activate genome_env2 #next we have to actually load that virtual environment using _source activate_
-conda install -c bioconda bam2fastx #install the desired package using conda
-conda deactivate #this closes the virtual environment
+conda create -n test_env1 
+source activate test_env1 
+conda install -c bioconda bam2fastx 
+conda deactivate 
 ```
 You should notice that when you activate the environment, your environment name appears in parenthese or brackets before your command prompt. 
 Once you deactivate the environment you should no longer see this. 
 
 ### Managing conda environments
+There are some basic commands in conda that will let you manage your environments, which are very useful to be familiar with.
 
-See what environments are available:
+
+Let's first see what environments are available - here you should see that environment that you just created above. 
 ```
 conda env list
 ```
 
 See what packages are installed in a specific environment:
 ```
-conda list -n conda_testenv
+conda list -n test_env1
 ```
 
 Removing an environment:
 ```
-conda env remove --name conda_testenv
+conda env remove --name test_env1
 ```
 
 ## Python3 venv
 venv is a module that already exists within python to create virtual environments, and as such we do not need to install anything to create a virtual environment.
 In the script below we will simply create a folder for our virtual environment, move into that folder, and then create our virtual environment for out project. 
 
-
-Create a virtual environment using python3 venv:
+Create a virtual environment using python3 venv. I have the first two lines commented out as you should still be in your virtual environment folder you created for your conda virtual environment. 
 ```
-module load python 
-mkdir test_ve
-cd test_ve
-python -m venv test_venv
+#mkdir venvs
+#cd venvs
+#module load python #UNCOMMENT THIS IF ON SUPERCOMPUTER
+python -m venv test_env2
 ls 
 ```
 
-You should now see a folder with your virtual environment name (here test_venv), now lets activate that virtual environment, install our packages, and then deactivate it. 
+You should now see a folder with your virtual environment name (here test_env2), now lets activate that virtual environment, install our packages, and then deactivate it. 
 ```
-source test_venv/bin/activate
-#line to install
-#you should now see that you have entered your virtual environment
+source test_env2/bin/activate
+conda install -c bioconda bam2fastx
+pip install pandas
+python -m pip list #cofirm what packages were installed
 deactivate
 ```
+
 ## python3 virtualenv with pip
 This method uses pip (python package manager) to install virtualenv to a local directory. See this helpful guide for more in depth details, and to see different syntax between Unix/macOS and Windows: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
 
@@ -117,13 +126,14 @@ pip3 install --user virtualenv
 
 Now we can create the virtual environment:
 ```
-python -m virtualenv env1_python
+python -m virtualenv test_env3
 source env1_python/bin/activate
 ```
 
-Once within the virtual environment you can install all packages desired:
+Once within the virtual environment you can install all packages desired, and again check to see what packages are installed in your virtual env:
 ```
-pip3 install <package_name>
+pip3 install scipy
+python -m pip list #see a list of packages installed 
 ```
 
 And don't forget to exit the virtual env: 
