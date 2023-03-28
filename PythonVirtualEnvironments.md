@@ -46,6 +46,7 @@ Okay if you are new to supercomputers, you will want to go through documentation
 ## Anaconda Virtual Environments
 First, we will create a python virtual environment using **anaconda**. 
 In this example I create a virtual environment called genome_env2, in which I install useful genomics packages using bioconda. 
+I personally prefer to use conda for installing packages, and thus it makes a virtual environment in conda most desireable for me, but I will walk you through some different ways to approach a virtual env. 
 Here is a helpful guide to managing environments with conda: https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 
 Before we create our virtual environment, lets first create a directory for our virtual environments, and move into that directory:
@@ -56,7 +57,7 @@ cd venvs
 
 Now, load a version of python installed with anaconda, this will be specific to your machine, and this is the path for Easley. On your machine you may be able to simply call anaconda: 
 ```
-module load python/anaconda 
+#module load python/anaconda #UNCOMMENT THIS IF ON SUPERCOMPUTER
 ```
 
 This next step will tell the program to create a local package directory rather than the default global setting (which you do not have permissions for in a supercomputer):
@@ -68,7 +69,7 @@ Now we will create our virtual environment, load it, install packages, and then 
 ```
 conda create -n test_env1 
 source activate test_env1 
-conda install -c bioconda bam2fastx 
+conda install -c bioconda bam2fastx scipy pandas
 conda deactivate 
 ```
 You should notice that when you activate the environment, your environment name appears in parenthese or brackets before your command prompt. 
@@ -87,7 +88,9 @@ See what packages are installed in a specific environment:
 ```
 conda list -n test_env1
 ```
-
+**Take a screenshot of your terminal including the command entered and the output that it printed to your screen.
+You will compile these screenshots throughout the tutorial for your weekly assignment.
+**
 Removing an environment:
 ```
 conda env remove --name test_env1
@@ -109,10 +112,16 @@ ls
 You should now see a folder with your virtual environment name (here test_env2), now lets activate that virtual environment, install our packages, and then deactivate it. 
 ```
 source test_env2/bin/activate
-conda install -c bioconda bam2fastx
 pip install pandas
 python -m pip list #cofirm what packages were installed
 deactivate
+```
+**Take a screenshot of your terminal from the python -m pip list command and the output that it printed to your screen.**
+
+
+To delete a virtual environment created using venv we can run this code to simply removing the folder and all it's contents (-r flag) - **but be cautious about running rm -r and make sure you are removing the correct thing**:
+```
+rm -r test_env2
 ```
 
 ## python3 virtualenv with pip
@@ -120,25 +129,29 @@ This method uses pip (python package manager) to install virtualenv to a local d
 
 First we will need to use pip to install virtualenv. You will only need to run these commands once to install virtualenv:
 ```
-module load python 
+#module load python #UNCOMMENT THIS IF ON SUPERCOMPUTER
 pip3 install --user virtualenv
 ```
 
 Now we can create the virtual environment:
 ```
 python -m virtualenv test_env3
-source env1_python/bin/activate
+source test_env3/bin/activate
 ```
 
 Once within the virtual environment you can install all packages desired, and again check to see what packages are installed in your virtual env:
 ```
-pip3 install scipy
+pip install scipy
 python -m pip list #see a list of packages installed 
 ```
+**Take a screenshot of your terminal from the python -m pip list command and the output that it printed to your screen.**
 
 And don't forget to exit the virtual env: 
 ```
-source deactivate
+deactivate
 ```
 
-
+To delete a virtual environment created using virtualenv we can run the same command as we did for our environment created with venv, which is simply removing the folder and all it's contents (-r flag) - but be cautious about running rm -r and make sure you are removing the correct thing:
+```
+rm -r test_env3
+```
