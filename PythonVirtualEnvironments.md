@@ -69,7 +69,7 @@ Now we will create our virtual environment, load it, install packages, and then 
 ```
 conda create -n test_env1 
 source activate test_env1 
-conda install -c bioconda bam2fastx scipy pandas
+conda install -c bioconda bam2fastx scipy pandas #Note that the -c flag allows you to indicate which "channel" to install the programs from, here that channel is bioconda
 conda deactivate 
 ```
 You should notice that when you activate the environment, your environment name appears in parenthese or brackets before your command prompt. 
